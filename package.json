@@ -1,0 +1,19 @@
+{
+  "name": "ma2221-guide",
+  "version": "1.0.0",
+  "description": "Guia para preparadurias en MA2221, USB",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-order": "^1.1.1",
+    "gulp-pandoc": "^0.2.2",
+    "gulp-pandoc-pdf": "^0.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlos David G. Nexans",
+  "license": "CC-SA-BY-3.0"
+}

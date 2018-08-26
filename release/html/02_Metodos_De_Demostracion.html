@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="métodos-de-demostración-y-lógica-simbólica.">Métodos de demostración y lógica simbólica.</h1>
+<p>A menudo, las matemáticas del colegio y del bachillerato suponen resolver ecuaciones, desigualdades y realizar operaciones bien definidas mendiante procesos y métodos, no obstante, como se ha visto desde Matemáticas I, hay que ser capaz de enfrentarse también a funciones, conjuntos y otros objetos matemáticos. Lo que une todos estos conocimientos es el <em>razonamiento deductivo</em>.</p>
+<p>El <em>razonamiento deductivo</em>, normalmente se presenta en forma de pruebas y demostraciones, aunque, en el fondo, también es el origen de los <em>procedimientos</em>. El curso de Álgebra I, a diferencia de las matemáticas comunes de ingeniería, es una materia en la cual la teoria juega un papel muy central. Esta seccion de lógica y métodos de prueba se agrega porque, a veces hay confusión sobre como hacer demostraciones dado que para algunos puede ser algo nuevo.</p>
+<h2 id="la-lógica-simbólica">La lógica simbólica</h2>
+<p><strong>Definición</strong>: una expresión booleana E, está conformada por constantes true y false (verdad y falsedad, respectivamente), variables booleanas y las operaciones <span class="math inline">¬</span>, <span class="math inline">∧</span>, <span class="math inline">∨</span>, <span class="math inline">⇒</span>, <span class="math inline">⇐</span>, <span class="math inline">⇔</span>. Las constantes booleanas muchas veces se llaman <em>valores booleanos</em> y las variables, a menudo, se dice que son de tipo <em>booleano</em>. Las variables booleanas se denotan con letras minusculas y las expresiones con letras mayusculas, tipicamente [1, pág 25].</p>
+<p>Definimos, las siguientes variables:</p>
+<ul>
+<li>p : mañana nevará</li>
+<li>q : mañana lloverá</li>
+</ul>
+<p>En la siguiente tabla se pueden apreciar los simbolos y su significado en el lenguaje natural.</p>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 24%" />
+<col style="width: 16%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Simbolo</th>
+<th style="text-align: center;">Nombre</th>
+<th style="text-align: center;">Ejemplo</th>
+<th style="text-align: center;">Traducción del ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">¬</span></td>
+<td style="text-align: center;">negación</td>
+<td style="text-align: center;"><span class="math inline">¬<em>p</em></span></td>
+<td style="text-align: center;">Mañana no nevará</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">∨</span></td>
+<td style="text-align: center;">disyunción</td>
+<td style="text-align: center;"><span class="math inline"><em>p</em> ∨ <em>q</em></span></td>
+<td style="text-align: center;">Mañana nevará o mañana lloverá</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">∨</span></td>
+<td style="text-align: center;">conjunción</td>
+<td style="text-align: center;"><span class="math inline"><em>p</em> ∧ <em>q</em></span></td>
+<td style="text-align: center;">Mañana nevará y mañana lloverá</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">⇒</span></td>
+<td style="text-align: center;">implicación</td>
+<td style="text-align: center;"><span class="math inline"><em>p</em> ⇒ <em>q</em></span></td>
+<td style="text-align: center;">Si mañana llueve, entonces mañana nevará.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">⇐</span></td>
+<td style="text-align: center;">consecuente</td>
+<td style="text-align: center;"><span class="math inline"><em>p</em> ⇐ <em>q</em></span></td>
+<td style="text-align: center;">Que mañana llueva, es una consecuencia de que mañana nieve</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">⇔</span></td>
+<td style="text-align: center;">equivalencia, doble implicación</td>
+<td style="text-align: center;"><span class="math inline"><em>p</em> ⇔ <em>q</em></span></td>
+<td style="text-align: center;">Mañana llueve, si y solo si, mañana nieva</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<h2 id="traducción-de-teoremas-y-proposiciones">Traducción de teoremas y proposiciones</h2>
+<ol type="1">
+<li>Si <span class="math inline"><em>p</em></span> es un número primo y p divide a <span class="math inline"><em>a</em><em>b</em></span>, entonces <span class="math inline"><em>p</em></span> divide a <span class="math inline"><em>a</em></span> o <span class="math inline"><em>p</em></span> divide a <span class="math inline"><em>b</em></span>. Podemos definir las siguientes variables booleanas:</li>
+</ol>
+<ul>
+<li>r : <span class="math inline"><em>p</em></span> es un número primo</li>
+<li>s : <span class="math inline"><em>p</em></span> divide a <span class="math inline"><em>a</em><em>b</em></span></li>
+<li>t : <span class="math inline"><em>p</em></span> divide a <span class="math inline"><em>a</em></span></li>
+<li>u : <span class="math inline"><em>p</em></span> divide a <span class="math inline"><em>b</em></span></li>
+</ul>
+<p><br /><span class="math display"><em>r</em> ∧ <em>s</em> ⇒ <em>t</em> ∨ <em>u</em></span><br /></p>
+<ol start="2" type="1">
+<li>Si <span class="math inline"><em>f</em>(<em>x</em>)</span> es un polinomio en <span class="math inline">𝔽</span>, y <span class="math inline"><em>a</em> ∈ 𝔽</span> entonces, <span class="math inline"><em>f</em>(<em>a</em>)=0</span> si y solo si <span class="math inline"><em>x</em> − <em>a</em></span> divide a <span class="math inline"><em>f</em>(<em>x</em>)</span>.</li>
+</ol>
+<ul>
+<li>r : <span class="math inline"><em>f</em>(<em>x</em>)</span> es un polinomio en <span class="math inline">𝔽</span></li>
+<li>s : <span class="math inline"><em>a</em> ∈ 𝔽</span></li>
+<li>t : <span class="math inline"><em>f</em>(<em>a</em>)=0</span></li>
+<li>u : <span class="math inline"><em>x</em> − <em>a</em></span> divide a <span class="math inline"><em>f</em>(<em>x</em>)</span></li>
+</ul>
+<p><br /><span class="math display"><em>r</em> ∧ <em>s</em> ⇒ (<em>t</em> ⇔ <em>u</em>)</span><br /></p>
+<ol start="3" type="1">
+<li>Si <span class="math inline"><em>f</em>(<em>x</em>)</span> es un polinomio con coeficientes en <span class="math inline">𝔽</span> y <span class="math inline"><em>a</em> ∈ 𝔽</span>, entonces <span class="math inline"><em>f</em>(<em>a</em>)</span> es el resto de dividir <span class="math inline"><em>f</em>(<em>x</em>)</span> entre <span class="math inline"><em>x</em> − <em>a</em></span>.</li>
+</ol>
+<ul>
+<li>r : <span class="math inline"><em>f</em>(<em>x</em>)</span> es un polinomio con coeficientes en <span class="math inline">𝔽</span></li>
+<li>s : <span class="math inline"><em>a</em> ∈ 𝔽</span></li>
+<li>t : <span class="math inline"><em>f</em>(<em>a</em>)</span> es el resto de dividir <span class="math inline"><em>f</em>(<em>x</em>)</span> entre <span class="math inline"><em>x</em> − <em>a</em></span></li>
+</ul>
+<p><br /><span class="math display"><em>r</em> ∧ <em>s</em> ⇒ <em>t</em></span><br /></p>
+<p>Una vez se tengan habilidades básicas de lógica proposicional, se hablarán de métodos de prueba y teoremas de lógica. Se propone al lector hacer los siguientes ejercicios y revisar los primeros capitulos de <em>How to prove it, a structured approach</em> [2].</p>
+<ol type="1">
+<li>Dé una expresión E de las siguientes proposiciones:
+<ol type="1">
+<li>Juan y Pedro dicen la verdad, o bien, ambos mienten.</li>
+<li>No irás a esquiar o bien, si vas a esquiar entonces no habrá nieve.</li>
+<li>Alicia no fué a la universidad y Pedro también.</li>
+</ol></li>
+<li>Diga si las siguientes expresiones tienen una estructura correcta:
+<ol type="1">
+<li><span class="math inline">¬(<em>P</em>, <em>Q</em> ∧ <em>R</em>)</span></li>
+<li><span class="math inline">¬(<em>P</em> ∨ <em>Q</em> ∧ <em>R</em>)⇒(<em>p</em> ⇔ <em>s</em>)</span></li>
+<li><span class="math inline">¬(<em>P</em> ∨ (<em>Q</em> ∧ <em>R</em>)) ⇒ (<em>m</em> ∧ <em>n</em>)</span></li>
+</ol></li>
+</ol>
+<p></p>
+<h2 id="metodos-de-demostracion-basicos">Metodos de demostracion basicos</h2>
+<p><strong>Demostraciones que involucran implicacion</strong>, para demostrar <span class="math inline"><em>P</em> ⇒ <em>Q</em></span></p>
+<p><strong>El metateorema de deducción extendido</strong>. Suponga que al considerar las expresiones <span class="math inline"><em>P</em><sub>1</sub>, <em>P</em><sub>2</sub>, ..., <em>P</em><sub><em>n</em></sub></span> como verdades, podemos demostrar <span class="math inline"><em>Q</em></span>. Entonces la expresion <span class="math inline"><em>P</em><sub>1</sub> ∧ <em>P</em><sub>2</sub> ∧ ... ∧ <em>P</em><sub><em>n</em></sub> ⇒ <em>Q</em></span> es una verdad o teorema.</p>
+<p><strong>El método directo</strong>: Para demostrar <span class="math inline"><em>P</em> ⇒ <em>Q</em></span>, suponga que <span class="math inline"><em>P</em></span> es cierto, y mediante el uso de proposiciones, lemas, teoremas o corolarios conocidos, demuestre <span class="math inline"><em>Q</em></span>. Ejemplo, demuestre que si <span class="math inline"><em>x</em> &gt; 3</span> e <span class="math inline"><em>y</em> &lt; 2</span>, entonces <span class="math inline"><em>x</em><sup>2</sup> − 2<em>y</em> &gt; 5</span></p>
+<p>Suponga que <span class="math inline"><em>x</em> &gt; 3</span> e <span class="math inline"><em>y</em> &lt; 2</span>. Se tiene que <span class="math inline"><em>x</em><sup>2</sup> = <em>x</em><em>x</em> &gt; 3<em>x</em></span> y <span class="math inline">3<em>x</em> &gt; 3 * 3 = 9</span>, entonces <span class="math inline"><em>x</em><sup>2</sup> &gt; 9</span>. Por otro lado, la segunda desigualdad implica que <span class="math inline">2<em>y</em> &lt; 4</span>, de donde <span class="math inline">−4 &lt; −2<em>y</em></span>. “Sumando” ambos resultados, obtenemos:</p>
+<p><br /><span class="math display"><em>x</em><sup>2</sup> − 2<em>y</em> &gt; 9 − 4 = 5</span><br /></p>
+<p>En ocasiones, no es sencillo demostrar por el método directo, por ejemplo, consideremos la siguiente proposición: si <span class="math inline"><em>p</em></span> es un número primo y p divide a <span class="math inline"><em>a</em><em>b</em></span>, entonces <span class="math inline"><em>p</em></span> divide a <span class="math inline"><em>a</em></span> o <span class="math inline"><em>p</em></span> divide a <span class="math inline"><em>b</em></span>. Suponer la hipótesis no nos deja demostrar la conclusión tan fácilmente, para solucionar este problema, podemos conseguir otra expresión equivalente mas sencilla de demostrar utilizando teoremas de lógica [1, pag. 52-78]:</p>
+<ol type="1">
+<li><strong>Equivalencia</strong> <span class="math inline"><em>p</em> ⇔ <em>q</em></span> se puede definir como <span class="math inline">(<em>p</em> ⇒ <em>q</em>)∧(<em>q</em> ⇒ <em>p</em>)</span></li>
+<li><strong>Contrareciproco</strong>, <span class="math inline"><em>p</em> ⇒ <em>q</em></span> es equivalente a <span class="math inline">¬<em>q</em> ⇒ ¬<em>p</em></span> .</li>
+<li><strong>Debilitamiento y fortalecimiento</strong>
+<ol type="a">
+<li><span class="math inline"><em>p</em> ∧ <em>q</em> ⇒ <em>p</em></span></li>
+<li><span class="math inline"><em>p</em> ⇒ <em>p</em> ∨ <em>q</em></span></li>
+<li><span class="math inline"><em>p</em> ∧ <em>q</em> ⇒ <em>p</em> ∨ <em>q</em></span></li>
+</ol></li>
+<li><strong>Definicion de implicacion</strong>. La expresion <span class="math inline"><em>p</em> ⇒ <em>q</em></span> es equivalente a <span class="math inline">¬<em>p</em> ∨ <em>q</em></span></li>
+<li><strong>Leyes de De Morgan</strong>
+<ol type="a">
+<li><span class="math inline">¬(<em>p</em> ∧ <em>q</em>)</span> es equivalente a <span class="math inline">¬<em>p</em> ∨ ¬<em>q</em></span></li>
+<li><span class="math inline">¬(<em>p</em> ∨ <em>q</em>)</span> es equivalente a <span class="math inline">¬<em>p</em> ∧ ¬<em>q</em></span></li>
+</ol></li>
+<li><strong>Analisis de casos</strong>
+<ol type="a">
+<li><span class="math inline">(<em>p</em> ⇒ <em>r</em>)∧(<em>q</em> ⇒ <em>r</em>)</span> es equivalente a <span class="math inline"><em>p</em> ∨ <em>q</em> ⇒ <em>r</em></span></li>
+<li><span class="math inline">(<em>p</em> ⇒ <em>r</em>)∧(¬<em>p</em> ⇒ <em>r</em>)</span> es equivalente a <span class="math inline"><em>r</em></span></li>
+</ol></li>
+<li><strong>Shunting</strong> <span class="math inline"><em>p</em> ⇒ (<em>q</em> ⇒ <em>r</em>)</span> es equivalente a <span class="math inline"><em>p</em> ∧ <em>q</em> ⇒ <em>r</em></span></li>
+<li><strong>Tercero excluído</strong> <span class="math inline"><em>p</em> ∨ ¬<em>p</em></span> es verdadero.</li>
+<li><strong>Doble negación</strong> <span class="math inline">¬¬<em>p</em></span> es equivalente a <span class="math inline"><em>p</em></span></li>
+</ol>
+<p>Hay muchos mas teoremas de logica, pero estos son bastante resaltantes, instamos al lector a leer el capítulo 3 de <em>A logical approach to discrete math</em> [1], para añadir más herramientas de deducción. Mediante estos teoremas, introduciremos los siguientes métodos de prueba</p>
+<p><strong>El contrarecíproco</strong>: para demostrar <span class="math inline"><em>P</em> ⇒ <em>Q</em></span>, se puede demostrar <span class="math inline">¬<em>Q</em> ⇒ ¬<em>P</em></span>; dado que ambas afirmaciones son equivalentes, con una se puede concluir la otra</p>
+<p><strong>Análisis de casos</strong>: por los teoremas agrupados en el punto 6, tenemos:</p>
+<ol type="1">
+<li>Para demostrar <span class="math inline"><em>P</em> ∨ <em>Q</em> ⇒ <em>R</em></span>, se puede demostrar <span class="math inline"><em>P</em> ⇒ <em>R</em></span> y, <span class="math inline"><em>Q</em> ⇒ <em>R</em></span>.</li>
+<li>Para demostrar <span class="math inline"><em>Q</em></span>, podemos partir de una cierta expresion <span class="math inline"><em>P</em></span> y demostrar que <span class="math inline"><em>P</em> ⇒ <em>Q</em></span> y <span class="math inline">¬<em>P</em> ⇒ <em>Q</em></span>.</li>
+</ol>
+<p>“Para asegurarte de que todas tus afirmaciones esten bien justificadas, debes ser esceptico de cada inferencia que hagas en tus demostraciones. Si tienes dudas de que tu justificacion sea correcta, entonces no es correcta. Despues de todo, ¿Si tu propio razonamiento no te convence, como esperas convencer a alguien más?” [2, pag. 86].</p>
+<p><strong>Contradicción</strong>:</p>
+<ol type="1">
+<li>Para demostrar <span class="math inline"><em>P</em></span>, podemos suponer que <span class="math inline">¬<em>P</em></span> es cierto y llegar a cualquier falsedad o contradicción, mediante teoremas conocidos.</li>
+<li>Podemos realizar el mismo procedimiento para demostrar una expresión que involucre una implicación.</li>
+</ol>
+<p><br /><span class="math display">¬(<em>P</em> ⇒ <em>Q</em>)</span><br /> <br /><span class="math display">⇔</span><br /> <br /><span class="math display">¬(¬<em>P</em> ∨ <em>Q</em>)</span><br /> <br /><span class="math display">⇔</span><br /> <br /><span class="math display">¬¬<em>P</em> ∧ ¬<em>Q</em></span><br /> <br /><span class="math display">⇔</span><br /> <br /><span class="math display"><em>P</em> ∧ ¬<em>Q</em></span><br /></p>
+<p>Quiere decir que, para demostrar <span class="math inline"><em>P</em> ⇒ <em>Q</em></span>, podemos suponer que <span class="math inline"><em>P</em></span> y <span class="math inline">¬<em>Q</em></span> son verdades y llegar a una contradicción.</p>
+<p></p>
+<h1 id="cuantificacion-y-logica-de-predicados">Cuantificacion y logica de predicados</h1>
+</body>
+</html>

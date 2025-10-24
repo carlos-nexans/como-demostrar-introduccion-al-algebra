@@ -9,18 +9,28 @@
 \usepackage{graphicx}
 \graphicspath{{./assets/}}
 
-% Code highlighting support
+% Code highlighting support (use listings instead of minted to avoid shell-escape dependency)
+% Local two-column support for specific sections
+\usepackage{multicol}
+\setlength{\columnsep}{18pt}
+\setlength{\columnseprule}{0pt}
+\raggedcolumns
+ 
 \usepackage{float}
-\usepackage{minted}
+\usepackage{listings}
+\usepackage{xcolor}
 \usepackage{float}
 
-% Configure minted for better code formatting
-\usemintedstyle{friendly}
-\setminted{
+% Configure listings for better code formatting
+\lstdefinestyle{custom}{
     frame=single,
     breaklines=true,
-    fontsize=\small
+    basicstyle=\small\ttfamily,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{teal}
 }
+\lstset{style=custom}
 \setcounter{topnumber}{2}
 \setcounter{bottomnumber}{2}
 \setcounter{totalnumber}{4}

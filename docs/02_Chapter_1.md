@@ -40,8 +40,7 @@ def incmatrix(genl1,genl2):
 \pagebreak
 ### Method 2: LaTeX Minted (Better Syntax Highlighting)
 
-\begin{samepage}
-\begin{minted}[linenos]{python}
+```python
 import numpy as np
     
 def incmatrix(genl1,genl2):
@@ -71,8 +70,7 @@ def incmatrix(genl1,genl2):
                 VT = np.zeros((n*m,1), int)
     
     return M
-\end{minted}
-\end{samepage}
+```
 
 
 \pagebreak
@@ -85,6 +83,19 @@ def incmatrix(genl1,genl2):
 \end{figure}
 
 \pagebreak
-## Subtitle
+
+## Table
+
++-----------------------+----------------------+
+| Good                  | Bad                  |
++=======================+======================+
+| ```cpp                | ```cpp               |
+| int foo() {           | int foo() {          |
+|     int result = 4;   |     int x = 4;       |
+|     return result;    |     return x;        |
+| }                     | }                    |
+| ```                   | ```                  |
++-----------------------+----------------------+
+
 
 \pagebreak

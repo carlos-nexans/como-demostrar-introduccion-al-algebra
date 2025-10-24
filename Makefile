@@ -18,7 +18,7 @@ PANDOC := pandoc
 PANDOC_COMMON_FLAGS := --standalone -f markdown+smart --number-sections
 PANDOC_HTML_FLAGS := $(PANDOC_COMMON_FLAGS) --toc -t html5 --toc-depth=2 -V toc-title=Contenido
 # PDF: clickable links (internal+urls). TOC injected via include to make it its own section/page
-PANDOC_PDF_FLAGS := $(PANDOC_COMMON_FLAGS) --pdf-engine=xelatex --pdf-engine-opt=-shell-escape --toc-depth=2 -V colorlinks=true -V urlcolor=cyan -V linkcolor=cyan --resource-path=.:./assets
+PANDOC_PDF_FLAGS := $(PANDOC_COMMON_FLAGS) --pdf-engine=xelatex --toc-depth=2 -V colorlinks=true -V urlcolor=cyan -V linkcolor=cyan --resource-path=.:./assets --syntax-highlighting=idiomatic
 TOC_TEX := $(ROOT)/pandoc/toc.tex
 HEADER_TEX := $(ROOT)/pandoc/header.tex
 

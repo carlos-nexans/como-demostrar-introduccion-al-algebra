@@ -1,5 +1,7 @@
-% Guia MA2221, Algebra I
-% Carlos David G. Nexans
+% Matematicas
+% Carlos Nexans
 % Julio, 2016.
 
-\pagenumbering{gobble}
+\thispagestyle{empty}
+
+\pagebreak

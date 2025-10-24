@@ -1,0 +1,19 @@
+% Force page numbers on all pages (except title page)
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Ensure pages that use 'plain' style (e.g., chapter starts) also show numbers
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+}
+% Make the title page use an empty style (no page number)
+\makeatletter
+\g@addto@macro\maketitle{\thispagestyle{empty}}
+\makeatother
+% Force all pages to use fancy style by default
+\AtBeginDocument{\pagestyle{fancy}}
+\pagenumbering{arabic}

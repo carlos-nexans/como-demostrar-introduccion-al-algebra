@@ -5,6 +5,30 @@
 \usepackage{setspace}
 \onehalfspacing
 
+% Enable image support
+\usepackage{graphicx}
+\graphicspath{{./assets/}}
+
+% Code highlighting support
+\usepackage{float}
+\usepackage{minted}
+\usepackage{float}
+
+% Configure minted for better code formatting
+\usemintedstyle{friendly}
+\setminted{
+    frame=single,
+    breaklines=true,
+    fontsize=\small
+}
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.7}
+
 % Force page numbers on all pages (except title page)
 \usepackage{fancyhdr}
 \pagestyle{fancy}

@@ -1,4 +1,4 @@
-# Métodos de demostración y lógica simbólica.
+# Cómo demostrar
 
 A menudo, las matemáticas del colegio y del bachillerato suponen resolver ecuaciones, desigualdades y realizar operaciones bien definidas mendiante procesos y métodos, no obstante, como se ha visto desde Matemáticas I, hay que ser capaz de enfrentarse también a funciones, conjuntos y otros objetos matemáticos. Lo que une todos estos conocimientos es el *razonamiento deductivo*.
 
@@ -26,7 +26,7 @@ En la siguiente tabla se pueden apreciar los simbolos y su significado en el len
 
 \pagebreak
 
-## Traducción de teoremas y proposiciones
+## Traducción de proposiciones
 
 1) Si $p$ es un número primo y p divide a $ab$, entonces $p$ divide a $a$ o $p$ divide a $b$. Podemos definir las siguientes variables booleanas:
 
@@ -68,7 +68,7 @@ Una vez se tengan habilidades básicas de lógica proposicional, se hablarán de
 
 \pagebreak
 
-## Metodos de demostracion basicos
+## Metodos básicos
 
 __Demostraciones que involucran implicacion__, para demostrar $P \Rightarrow Q$
 
@@ -128,7 +128,7 @@ Quiere decir que, para demostrar $P \Rightarrow Q$, podemos suponer que $P$ y $\
 
 \pagebreak
 
-# Cuantificacion y logica de predicados
+## Lógica de predicados
 
 Contenido
 

@@ -1,4 +1,4 @@
-% Matematicas
+% Matemáticas
 % Carlos Nexans
 % Julio, 2016.
 
